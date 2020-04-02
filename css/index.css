@@ -38,7 +38,17 @@ a{
     font-size: 19px;
     font-family: simkai;
 }
-
+.f3 {
+    margin: 0 auto;
+    width: 1000px;
+    line-height: 28px;
+}
+/*.f4 {
+    margin: 0 auto;
+    width: 1000px;
+    line-height: 28px;
+}
+*/
 .f5{
     margin: 0 auto;
     width: 1000px;
