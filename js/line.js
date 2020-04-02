@@ -48,7 +48,7 @@ d3.csv("data.csv").then(data => {
     document.getElementById('sel-crime').onchange = function() {
         draw(data);
     }
-    document.getElementById('sel-crime').onchange = function() {
+    document.getElementById('sel-region').onchange = function() {
         draw(data);
     }
 })
