@@ -9,9 +9,9 @@ d3.csv("count.csv").then(data => {
 	console.log(data);
 
 	var lengthScale = d3.scaleLinear()
-		.domain([0, d3.max(data, d => +d.count)])
+		.domain([0, d3.max(data, d => +d.sum)])
 		.range([280, 500])
-	console.log([d3.min(data, d => +d.count), d3.max(data, d => +d.count)])
+	console.log([d3.min(data, d => +d.sum), d3.max(data, d => +d.sum)])
 
 	svg2.selectAll("rect")
 		.data(data)
@@ -20,7 +20,7 @@ d3.csv("count.csv").then(data => {
 		.attr("x", 280)
 		.attr("y", (d,i) => 20*i+50)
 		.attr("width", d => {
-			return lengthScale(+d.count)-280
+			return lengthScale(+d.sum)-280
 		})
 		.attr("height", 12)
 		.attr("fill", "lightblue");
@@ -30,10 +30,10 @@ d3.csv("count.csv").then(data => {
 		.enter()
 		.append("text")
 		.attr("x", d => {
-			return lengthScale(+d.count)+8
+			return lengthScale(+d.sum)+8
 		})
 		.attr("y", (d,i) => 20*i+60)
-		.text(d => d.count)
+		.text(d => d.sum)
 		.style("font-size", 10)
 		.style("text-anchor", "start")
 		.attr("class", "tick")
