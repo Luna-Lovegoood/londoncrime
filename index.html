@@ -1,46 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>London Crime</title>
+<!-- <link rel="stylesheet" href="./css/index.css"> -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style type="text/css">
+</style>
 </head>
 <body>
-    <div class="f1 container">
-      <div class="f1_div">
-        <h1 class="f1_h1">Crime records in different boroughs of London</h1>
-        <h2>name</h2>
+<div id="background">
+  <ul id="nav">
+    <li><a href="#p1">Introduction</a></li>
+    <li><a href="#p2">Chart</a></li>
+    <li><a href="#p3">Conclusion</a></li>
+    <li><a href="#p4">Reference</a></li>
+  </ul>
+  <div id="title">
+    <strong style="font-size: 64px;">Crime Records</strong><br>
+    in Different Boroughs of London
+    <div id="info">Name: Junjie Leng, Student number: 1918507</div>
+  </div>
+
+</div>
+<div id="back">
+  <div id="main">
+    <div class="block" id="p1">
+      <div class="title">Introduction</div>
+      <div class="content">&nbsp;&nbsp;The crime rate in London has always been high, and the variety of crimes has caused London's crime situation to become one of the most concerned things.In this project, I choose the data which counts the number of different crime type in different boroughs of London per month. The research question is to explore the relationship between crime types and crime areas by studying the number of crimes. The data source link is: <a href="https://data.london.gov.uk/dataset/recorded_crime_summary" style="color: #000; font-style:italic;">https://data.london.gov.uk/dataset/recorded_crime_summary</a></div>
+    </div>
+
+    <div class="block" id="p2">
+      <div class="title">Chart</div>
+      <div id="chart"></div>
+      <div class="content">&nbsp;&nbsp;The line chart is drawn of crime in different areas of London for users to view it according to their needs. And setting up two filters at the same time to filter by region and crime type.</div>
+      
+      <div id="bar"></div>
+      <div class="content">&nbsp;&nbsp;The histogram counts the number of crimes in different areas of London according to the type of crime, and you can intuitively see the type of crime with the highest crime rate in London.</div>
+    </div>
+
+    <div class="block" id="p3">
+      <div class="title">Conclusion</div>
+      <div class="content">&nbsp;&nbsp;By visualizing the crime data in different areas of London, you can clearly see the crime situation in various areas of London, which is convenient for people to evaluate the security of the area. We can also clearly see which type of crime is most common in the histogram, so people can prevent this in advance. To a certain extent, this has played an effective role in preparing people in advance to prevent crimes from being committed. In addition, there are many areas for improvement in this project. For example, a visual map can be made to make people more clearly see the crime situation in various parts of London.</div>
+    </div>
+    
+    <div class="block" id="p4">
+      <div class="title">Reference</div>
+      <div class="content" style="height: 200px;">
+        <ul style="margin-top: 40px;">
+          <li>Sopan, A., Noh, A. S. I., Karol, S., Rosenfeld, P., Lee, G., & Shneiderman, B. (2012). Community Health Map: A geospatial and multivariate data visualization tool for public health datasets. Government Information Quarterly, 29(2), 223-234.</li>
+
+          <li>Jiamin, Wu., Lianying, Sun.,& Dezheng, Zhang. (2002). Research and Development of Spatial Data Visualization. Computer Engineering and Applications,10, 86-88.</li>
+        </ul>
       </div>
     </div>
+  </div>
+  
+</div>
 
-    <div class="f2">
-      <h1>introduction</h1>
-      The crime rate in London has always been high, and the variety of crimes has caused London's crime situation to become one of the most concerned things.In this project, I choose the data which counts the number of different crime type in different boroughs of London per month.
-The research question is to explore the relationship between crime types and crime areas by studying the number of crimes.
-The data source link is: <a href="https://data.london.gov.uk/dataset/recorded_crime_summary">https://data.london.gov.uk/dataset/recorded_crime_summary</a>
-    </div>
-
-    <div class="f3" id="chart">
-        
-    </div>
-
-    <div class="f4" id="bar">
-      <h1></h1>
-    </div>
-
-    <div class="f5">
-      <h1>literature review</h1>
-      Crime scatter plot enables users to visualize crime data in different space. Based on displaying the data, the visualization can be used to illustrate the evaluation and development process so that it can provide useful information to help make decisions.
-Users can visualize the geospatial distribution of a given variable on an interactive scatter plot. In addition, Visualization can be narrowed down to a specific area due to the dynamic query filters it provides.
-    </div>
-
-    <div class="f6">
-      <h1>Reference</h1>
-      Sopan, A., Noh, A. S. I., Karol, S., Rosenfeld, P., Lee, G., & Shneiderman, B. (2012). Community Health Map: A geospatial and multivariate data visualization tool for public health datasets. Government Information Quarterly, 29(2), 223-234.
-      Jiamin, Wu., Lianying, Sun.,& Dezheng, Zhang. (2002). Research and Development of Spatial Data Visualization. Computer Engineering and Applications,10, 86-88.
-    </div>
 <script src="js/d3.v5.min.js"></script>
 <script src="js/line.js"></script>
 <script src="js/bar.js"></script>
